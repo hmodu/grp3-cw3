@@ -92,52 +92,10 @@
                                     <!-- This input field is bound to 'Address' in the 'order' object -->
                                     <strong>Address:</strong> <input v-model='order.address' />
                                 </p>
-                                <p>
-                                    <!-- This input field is bound to 'City' in the 'order' object -->
-                                    <strong>City:</strong><input v-model='order.city' />
-                                </p>
+                             
                                 <P>
                                     <strong>Phone Number:</strong><input v-model.number="order.phone" type="number">
                                 </P>
-
-                                <p>
-                                    <!-- This input field is bound to 'State' in the 'order' object -->
-                                    <strong>State</strong>
-                                    <select v-model='order.state'>
-                                        <option disabled value="">State</option>
-                                        <option v-for="(state, key) in states" v-bind:value="state">
-                                            {{state}}
-                                        </option>
-                                    </select>
-                                </p>
-                                <!-- This input field is bound to 'Zip' in the 'order' object -->
-                                <p><strong>Zip/ Postal Code</strong><input v-model.number='order.zip' type="number"></p>
-
-                                <!-- This input field is bound to 'Is Gift' in the 'order' object -->
-                                <p>
-                                    <input type="checkbox" id="gift" value="true" v-model="order.gift"
-                                        v-bind:true-value="order.sendGift" v-bind:false-value="order.dontSendGift">
-                                    <label for="gift"> Ship as Gift?</label>
-                                </p>
-
-                                <p>
-                                    <input type="radio" id="home" value="Home" v-model="order.method">
-                                    <label for="home">Home</label>
-
-                                    <input type="radio" id="business" value="Business" v-model="order.method">
-                                    <label for="business">Business</label>
-                                </p>
-
-                                <h2>Order Information</h2>
-                                <p>First Name:{{order.firstName}}</p>
-                                <p>Last Name: {{order.lastName}}</p>
-                                <p>Address: {{order.address}}</p>
-                                <p>City: {{order.city}}</p>
-                                <p>Phone Number: {{order.phone}}</p>
-                                <p>Zip: {{order.zip}}</p>
-                                <p>State: {{order.state}}</p>
-                                <p>Gift: {{order.gift}}</p>
-                                <p>Method: {{order.method}}</p>
 
                                 <button v-on:click="submitForm" class="btn btn-info">Place Order</button>
                             </div>
@@ -221,26 +179,7 @@
                 }
                 return count;
             },
-            sortedPrice() {
-
-                this.products.sort((a, b) => a.price < b.price ? 1 : -1);;
-
-            },
-            sortedTitle() {
-                this.products.sort((a, b) => a.title < b.title ? 1 : -1);
-            },
-            sortedLocation() {
-                this.products.sort((a, b) => a.location < b.location ? 1 : -1);;
-            },
-            sortedAvailable() {
-                this.products.sort((a, b) => a.availableInventory < b.availableInventory ? 1 : -1);;
-            },
-            sortedAscending() {
-                this.products.sort((a, b) => a.price > b.price ? 1 : -1);;
-            },
-            sortedDescending() {
-                this.products.sort((a, b) => a.price < b.price ? 1 : -1);;
-            },
+            
         },
         computed: {
             cartItemCount: function () {
