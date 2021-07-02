@@ -1,7 +1,7 @@
 var cacheName = 'AfterSchoolLesson-v1';
 var cacheFiles = [
    'index.html',
-   'group.html',
+   'component.html',
    'products.js',
    'lesson.webmanifest',
    'images/SONG Unique Logo Design.jpg',
