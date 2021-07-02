@@ -7,16 +7,7 @@
 </head>
 
 <body>
-    <div class="container-sm">
-        <div class="col-sm-12">
-            <div class="card" style="padding: 10px; margin-bottom: 10px; margin-top: 10px;">
-                <div id="app">
-                    <header>
-                        <h1> {{ sitename }}</h1>
-                        <button class="btn btn-secondary" style="float: right;"
-                            v-on:click='showCheckout'>{{cartItemCount}}
-                            Checkout</button>
-                    </header>
+  
                     <main>
                         <div V-if='showProduct'>
                             <figure>
