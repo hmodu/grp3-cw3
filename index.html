@@ -95,16 +95,7 @@
             order: {
                 firstName: "",
                 lastName: "",
-                address: "",
-                city: "",
-                state: "",
-                phone: "",
-                zip: "",
-                method: 'Home',
-                method1: 'Price',
-                gift: false,
-                sendGift: 'Send as a gift',
-                dontSendGift: 'Do not send as a gift'
+                phone: ""
             },
             products: products,
         },
@@ -121,19 +112,7 @@
             submitForm() {
                 alert('order has been placed')
             },
-            // itemList: function(){
-            //     showCart=[
-            //         {
-            //             "name": "",
-            //             "price": ""
-            //         }
-
-
-            //     ]
-            // },
-            //Remove canAddToCart from Computed to Method since computed does not take parameters, 
-            //We are now working with an array of objects and therefore need to pass the product
-            //and its ID to identify which product we are working with
+       
             canAddToCart: function (product) {
                 return product.availableInventory > this.cartCount(product.id);
             },
